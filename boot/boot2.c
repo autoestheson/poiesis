@@ -75,7 +75,7 @@ uint32_t load(void *dest, char *name) {
         load_block(dest, id);
         dest += 512;
         load_block(buf, disk.skip_sz + id / 128);
-        id = buf[id * 4 % 512 / 4]; // No need for explanation.
+        id = buf[id % 128];
         putc('.');
     }
     putc('\n');
