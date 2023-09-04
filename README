@@ -1,0 +1,11 @@
+POIESIS: A simple operating system.
+
+The end goal is to get anywhere from a TripOS-like SASOS to a slightly more advanced version of an early MacOS.
+
+Neither are terribly difficult, nor is this intended to be a challenge. I write this in hope of some aesthetic purity (think TempleOS) and to learn the basics of Operating System Development.
+
+As a note, I am not shy about code reuse. Basic things don't need to be reimplemented from scratch, unless I somehow have a problem with it.
+
+The following projects have been essential in the development of POIESIS so far:
+- [EchFS](https://github.com/echfs/echfs) by [mintsuki](https://github.com/mintsuki) - The 64-bit EchFS was used as a starting point for POIESIS's 32-bit filesystem, EKFS.
+- [xv6](https://github.com/mit-pdos/xv6-public) by [The PDOS group at MIT's CSAIL](https://github.com/mit-pdos) - Used as a general guide for how to structure a 32-bit x86 operating system.
