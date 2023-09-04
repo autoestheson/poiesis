@@ -28,7 +28,7 @@ void wr_dword(uint32_t pos, uint32_t val) {
 void format_pass1(int argc, char **argv, int quick) {
     disk_blocks = disk_bytes / BLOCK_BYTES;
     root_blocks = disk_blocks / 20;
-    skip_blocks = 16;
+    skip_blocks = 1;
     
     fseek(disk, 0, SEEK_SET);
     fwrite(bootblock, 512, 1, disk);

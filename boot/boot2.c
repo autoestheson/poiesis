@@ -29,7 +29,7 @@ struct {
 void disk_init() {
     putn(10, disk.disk_sz = *((uint32_t *)(0x7C00 + FS_DISK_BLOCKS_AT))); puts(" total, ");
     putn(10, disk.root_sz = *((uint32_t *)(0x7C00 + FS_ROOT_BLOCKS_AT))); puts(" root, ");
-    putn(10, disk.skip_sz = *((uint32_t *)(0x7C00 + FS_SKIP_BLOCKS_AT))); puts(" reserved blocks\n");
+    putn(10, disk.skip_sz = *((uint32_t *)(0x7C00 + FS_SKIP_BLOCKS_AT))); puts(" reserved block(s)\n");
 }
 
 void disk_wait() {
@@ -75,7 +75,7 @@ uint32_t load(void *dest, char *name) {
         load_block(dest, id);
         dest += 512;
         load_block(buf, disk.skip_sz + id / 128);
-        id = buf[id * 4 % 256 / 4]; // Wait! I can explain!!!
+        id = buf[id * 4 % 512 / 4]; // No need for explanation.
         putc('.');
     }
     putc('\n');
