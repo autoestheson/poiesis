@@ -9,3 +9,9 @@ As a note, I am not shy about code reuse. Basic things don't need to be reimplem
 The following projects have been essential in the development of POIESIS so far:
 - [EchFS](https://github.com/echfs/echfs) by [mintsuki](https://github.com/mintsuki) - The 64-bit EchFS was used as a starting point for POIESIS's 32-bit filesystem, EKFS.
 - [xv6](https://github.com/mit-pdos/xv6-public) by [The PDOS group at MIT's CSAIL](https://github.com/mit-pdos) - Used as a general guide for how to structure a 32-bit x86 operating system.
+
+UPDATE:
+
+I HATE X86 I HATE X86 I HATE X86
+
+The project is cancelled.
